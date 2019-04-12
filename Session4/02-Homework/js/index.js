@@ -12,7 +12,7 @@ function init() {
   H = window.innerHeight;
 
   camera = new THREE.PerspectiveCamera(45, W / H, .1, 1000);
-  camera.position.set(0, 55, 85);
+  camera.position.set(0, 0, 45);
   camera.lookAt(scene.position);
 
   var spotLight = new THREE.SpotLight(0xFFFFFF);
@@ -42,11 +42,11 @@ function init() {
       //The color of the material is assigned a random color
 
       if (x==-5 && y==-5){
-        boxMaterial = new THREE.MeshLambertMaterial({color: 0xF67280});
+        boxMaterial = new THREE.MeshLambertMaterial({color: 0x9EDFF2});
       } else if (x==5 && y ==5){
-        boxMaterial = new THREE.MeshLambertMaterial({color: 0xF8B195});
+        boxMaterial = new THREE.MeshLambertMaterial({color: 0x9EDFF2});
       } else {
-        boxMaterial = new THREE.MeshLambertMaterial({color: 0x355C7D});
+        boxMaterial = new THREE.MeshLambertMaterial({color: 0x9EDFF2});
       }
 
       var mesh = new THREE.Mesh(boxGeometry, boxMaterial);
@@ -76,8 +76,8 @@ function drawFrame(){
 
   //rot+=0.01;
   for (var i = 0; i < 5; i ++){
-    cubes[6].rotation.x += randomSpeedX[6];
-    cubes[18].rotation.x += randomSpeedX[18];
+    cubes[3].rotation.x += randomSpeedX[18];
+    cubes[10].rotation.x += randomSpeedX[18];
 
 }
  renderer.render(scene, camera);
